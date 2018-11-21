@@ -21,7 +21,7 @@ NOTE: This setup will only work in regions where the "Reckognition Service is av
  Lambda code
    1. Create an S3 bucket in the proper region
    2. Upload .zip file on the bucket under the name you put in "CodeUri".
-      ex. "CodeUri": "s3://<nameofbucket>/<nameoflambdazipfile>.zip"
+      ex. "CodeUri": "s3://(nameofbucket)/(nameoflambdazipfile).zip"
  
 
 
@@ -29,7 +29,7 @@ NOTE: This setup will only work in regions where the "Reckognition Service is av
  Running the cloudformation script
    1. Configure your aws cli to the proper region before running the command.
    2. Command example:
-      aws cloudformation deploy --region eu-west-1 --template-file hotdog.yaml --stack-name hotdogtest --capabilities       CAPABILITY_NAMED_IAM --parameter-overrides VerificationToken=<vtoken from slack> AccessToken=<Oauth token from slack>
+      aws cloudformation deploy --region eu-west-1 --template-file hotdog.yaml --stack-name hotdogtest --capabilities       CAPABILITY_NAMED_IAM --parameter-overrides VerificationToken=(vtoken from slack) AccessToken=(Oauth token from slack)
    
    
    Finalize Slack Event Subscription
